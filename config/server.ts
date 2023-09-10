@@ -1,5 +1,5 @@
 export default ({ env }) => ({
-  host: env("VERCEL_URL", "0.0.0.0") ?? env("HOST", "0.0.0.0"),
+  host: env("VERCEL_URL") ?? env("HOST", "0.0.0.0"),
   port: env.int("PORT", 80),
   app: {
     keys: env.array("APP_KEYS"),
