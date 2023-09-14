@@ -20,7 +20,7 @@ services:
       DATABASE_NAME: portal_akukreatif
       DATABASE_USERNAME: zakiego
       DATABASE_PASSWORD: ZSDw1fV9tPqH
-      DATABASE_SSL: true
+      DATABASE_SSL: 1
       JWT_SECRET: tXnncaLKIs7ZsYE1w8FGcw==
       NODE_ENV: production
     volumes:
