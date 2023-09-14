@@ -14,6 +14,7 @@ RUN yarn build
 
 # Creating final production image
 FROM node:18-alpine
+LABEL name="cms-akukreatif-service"
 RUN apk add --no-cache vips-dev
 ARG NODE_ENV=production
 ENV NODE_ENV=${NODE_ENV}

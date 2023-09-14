@@ -2,35 +2,6 @@ version: "3"
 
 services:
   strapi:
-    container_name: strapi
-    build: .
-    image: strapi:latest
-    restart: unless-stopped
-    env_file: .env
-    environment:
-      HOST: 0.0.0.0
-      PORT: 1337
-      APP_KEYS: EzXsppAFScaj0ZcstmDcnQ==,cfZL6VdZEMSfB0rxWCPv7A==,Ucovc+GcKmErdCoscUfLqQ==,kHdFiZGuLUgUBQMFIn/v9Q==
-      API_TOKEN_SALT: KNSnHEuALGuQei/Wxr9nqA==
-      ADMIN_JWT_SECRET: DFNMrqRPubTXi0JoaZaABA==
-      TRANSFER_TOKEN_SALT: v08pBceb/LKVykj6Dz3Hmg==
-      DATABASE_CLIENT: postgres
-      DATABASE_HOST: ep-withered-dust-904165.ap-southeast-1.aws.neon.tech
-      DATABASE_PORT: 5432
-      DATABASE_NAME: portal_akukreatif
-      DATABASE_USERNAME: zakiego
-      DATABASE_PASSWORD: ZSDw1fV9tPqH
-      DATABASE_SSL: 1
-      JWT_SECRET: tXnncaLKIs7ZsYE1w8FGcw==
-      NODE_ENV: production
-    volumes:
-      - ./config:/opt/app/config
-      - ./src:/opt/app/src
-      - ./package.json:/opt/package.json
-      - ./yarn.lock:/opt/yarn.lock
-      - ./.env:/opt/app/.env
-      - ./public/uploads:/opt/app/public/uploads
-    ports:
-      - "1337:1337"
-    labels:
-      - "name=cms-akukreatif"
+    build:
+      context: .
+      dockerfile: ./Dockerfile.prod
