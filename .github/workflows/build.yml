@@ -6,17 +6,33 @@ on:
       - main
 
 jobs:
-  publish:
+  run_example_job:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      packages: write
+    timeout-minutes: 5
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Build and publish
-        uses: pennsignals/publish_docker-compose@v0.1.0
+      - name: print out example job
+        uses: appleboy/ssh-action@v0.1.10
         with:
-          version: "latest"
-          docker_compose: "docker-compose.yml"
-          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.KEY }}
+          port: ${{ secrets.PORT }}
+          command_timeout: 30m
+          script: |
+            echo "Nice Job!!!"
+            whoami
+            neofetch
+  # publish:
+  #   runs-on: ubuntu-latest
+  #   permissions:
+  #     contents: read
+  #     packages: write
+  #   steps:
+  #     - name: Checkout
+  #       uses: actions/checkout@v3
+  #     - name: Build and publish
+  #       uses: pennsignals/publish_docker-compose@v0.1.0
+  #       with:
+  #         version: "latest"
+  #         docker_compose: "docker-compose.yml"
+  #         repo_token: "${{ secrets.GITHUB_TOKEN }}"
