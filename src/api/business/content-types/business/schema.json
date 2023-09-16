@@ -12,8 +12,13 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Name": {
+    "name": {
       "type": "string"
+    },
+    "regency": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::regency.regency"
     }
   }
 }
