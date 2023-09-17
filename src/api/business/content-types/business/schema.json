@@ -13,12 +13,35 @@
   "pluginOptions": {},
   "attributes": {
     "name": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "regency": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::regency.regency"
+    },
+    "sector": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::sector.sector"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "social": {
+      "type": "component",
+      "repeatable": false,
+      "component": "social.socials"
+    },
+    "owner": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::owner.owner",
+      "inversedBy": "businesses"
+    },
+    "address": {
+      "type": "string"
     }
   }
 }
