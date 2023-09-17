@@ -30,7 +30,7 @@ jobs:
           context: .
           push: true
           tags: ghcr.io/${{ github.repository }}:latest
-          file: ./docker-compose.yml
+          file: ./Dockerfile.prod
 
   pull:
     runs-on: ubuntu-latest
