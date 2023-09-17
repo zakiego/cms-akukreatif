@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_social_socials",
+  "info": {
+    "displayName": "socials",
+    "icon": "shield",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "whatsapp": {
+      "type": "string"
+    },
+    "facebook": {
+      "type": "string"
+    },
+    "twitter": {
+      "type": "string"
+    },
+    "instagram": {
+      "type": "string"
+    },
+    "linkedin": {
+      "type": "string"
+    },
+    "telegram": {
+      "type": "string"
+    },
+    "web": {
+      "type": "string"
+    }
+  }
+}

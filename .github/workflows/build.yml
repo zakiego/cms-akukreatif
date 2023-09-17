@@ -37,7 +37,7 @@ jobs:
     needs: publish
     timeout-minutes: 5
     steps:
-      - name: print out example job
+      - name: Pull Docker Image and Restart Container
         uses: appleboy/ssh-action@v1.0.0
         with:
           host: ${{ secrets.HOST }}
