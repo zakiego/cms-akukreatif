@@ -15,7 +15,8 @@
     "@strapi/plugin-i18n": "4.13.6",
     "@strapi/plugin-users-permissions": "4.13.6",
     "@strapi/strapi": "4.13.6",
-    "pg": "8.8.0"
+    "pg": "8.8.0",
+    "strapi-auto-uuid": "^0.0.8"
   },
   "author": {
     "name": "A Strapi developer"
@@ -24,7 +25,7 @@
     "uuid": "6a353055-f6eb-4fd1-9fe3-8b841e63fc6a"
   },
   "engines": {
-    "node": ">=16.0.0 <=20.x.x",
+    "node": ">=16.0.0 <=18.x.x",
     "npm": ">=6.0.0"
   },
   "license": "MIT"

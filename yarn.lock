@@ -8244,6 +8244,13 @@ std-env@^3.0.1:
   resolved "https://registry.yarnpkg.com/std-env/-/std-env-3.4.3.tgz#326f11db518db751c83fd58574f449b7c3060910"
   integrity sha512-f9aPhy8fYBuMN+sNfakZV18U39PbalgjXG3lLB9WkaYTxijru61wb57V9wxxNthXM5Sd88ETBWi29qLAsHO52Q==
 
+strapi-auto-uuid@^0.0.8:
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/strapi-auto-uuid/-/strapi-auto-uuid-0.0.8.tgz#2985e3b803c0592b0d851bf7b3162aa7e0ecf2f0"
+  integrity sha512-MHwvnM/nwj16BDjimUXmH8CVaxuDAu6Le0j7tJJos31CrqSdZRgRYwn7iN93U/i6fqnl6/2LdSoNoZVqe5lWAQ==
+  dependencies:
+    uuid "^9.0.0"
+
 stream-chain@2.2.5, stream-chain@^2.2.5:
   version "2.2.5"
   resolved "https://registry.yarnpkg.com/stream-chain/-/stream-chain-2.2.5.tgz#b30967e8f14ee033c5b9a19bbe8a2cba90ba0d09"
